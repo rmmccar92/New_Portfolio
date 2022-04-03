@@ -1,14 +1,17 @@
 import React, { useRef, useState } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
 import { TextureLoader } from "three";
-import { useSpring, animated } from "@react-spring/three";
+import { useSpring, animated, config } from "@react-spring/three";
 
 const Box = (props) => {
   const texture = useLoader(TextureLoader, "/images/skybox.jpg");
   const mesh = useRef();
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
-  const { scale } = useSpring({ scale: active ? 1.5 : 1 });
+  const { scale } = useSpring({
+    scale: active ? 1.5 : 1,
+    config: config.wobbly,
+  });
   useFrame(() => (mesh.current.rotation.x += 0.001));
   return (
     <animated.mesh
