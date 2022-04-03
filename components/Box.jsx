@@ -1,14 +1,29 @@
-import React from "react";
-import { useLoader } from "@react-three/fiber";
+import React, { useRef, useState } from "react";
+import { useLoader, useFrame } from "@react-three/fiber";
 import { TextureLoader } from "three";
+import { useSpring, animated } from "@react-spring/three";
 
 const Box = (props) => {
   const texture = useLoader(TextureLoader, "/images/skybox.jpg");
+  const mesh = useRef();
+  const [hovered, setHovered] = useState(false);
+  const [active, setActive] = useState(false);
+  const { scale } = useSpring({ scale: active ? 1.5 : 1 });
+  useFrame(() => (mesh.current.rotation.x += 0.001));
   return (
-    <mesh {...props} receiveShadow={true} castShadow={true}>
-      <boxBufferGeometry />
-      <meshPhysicalMaterial map={texture} color="white" />
-    </mesh>
+    <animated.mesh
+      {...props}
+      receiveShadow={true}
+      castShadow={true}
+      ref={mesh}
+      onPointerOver={(e) => setHovered(true)}
+      onPointerOut={(e) => setHovered(false)}
+      onClick={(e) => setActive(!active)}
+      scale={scale}
+    >
+      <boxBufferGeometry args={[2, 2, 2]} />
+      <meshPhysicalMaterial color={hovered ? "red" : "blue"} />
+    </animated.mesh>
   );
 };
 
