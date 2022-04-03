@@ -9,7 +9,7 @@ const Sphere = (props) => {
 
   return (
     <mesh {...props} receiveShadow={true} castShadow={true} ref={mesh}>
-      <sphereBufferGeometry args={[2, 30, 10]} />
+      <sphereBufferGeometry args={[2, 30, 10]} clearcoat={1} />
       <meshPhysicalMaterial map={texture} color="white" />
     </mesh>
   );
