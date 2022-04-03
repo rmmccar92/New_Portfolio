@@ -5,10 +5,13 @@ import { TextureLoader } from "three";
 const Floor = (props) => {
   const texture = useLoader(TextureLoader, "/images/skybox.jpg");
   return (
-    <mesh {...props} receiveShadow={true}>
-      <boxBufferGeometry args={[50, 0.5, 40]} />
-      <meshPhysicalMaterial map={texture} />
-    </mesh>
+    <>
+      {/* <fog attach="fog" args={["black", 1, 100]} /> */}
+      <mesh {...props} receiveShadow={true}>
+        <boxBufferGeometry args={[80, 0.5, 80]} />
+        <meshPhysicalMaterial map={texture} />
+      </mesh>
+    </>
   );
 };
 
