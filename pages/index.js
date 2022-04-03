@@ -14,7 +14,6 @@ import { GridHelper } from "three";
 
 const Home = () => {
   const grid = useRef();
-  useHelper(GridHelper);
   return (
     <div className={css.scene}>
       <Canvas
@@ -24,7 +23,7 @@ const Home = () => {
           position: [-6, 7, 7],
         }}
       >
-        <mesh ref={gird}>
+        <mesh ref={grid}>
           <ambientLight color="#D9DFFF" intensity={1} />
           <LightBulb position={[5, 10, 5]} />
           {/* <Draggable> */}
