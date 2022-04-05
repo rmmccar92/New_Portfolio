@@ -6,6 +6,7 @@ extend({ OrbitControls });
 
 function Controls(props) {
   const { camera, gl } = useThree();
+
   return (
     <orbitControls attach={"orbitControls"} args={[camera, gl.domElement]} />
   );

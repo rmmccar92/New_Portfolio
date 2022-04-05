@@ -7,7 +7,7 @@ const Floor = (props) => {
   return (
     <>
       {/* <fog attach="fog" args={["black", 1, 100]} /> */}
-      <mesh {...props} receiveShadow={true}>
+      <mesh {...props} receiveShadow={true} scale={[2, 2, 2]}>
         <boxBufferGeometry args={[80, 0.5, 80]} />
         <meshPhysicalMaterial map={texture} />
       </mesh>

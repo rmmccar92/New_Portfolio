@@ -22,7 +22,15 @@ const Scene = () => {
       </Suspense>
       {/* </Draggable> */}
       <OrbitControls />
-      <Floor position={[0, -1, 0]} />
+      <Floor position={[0, 0, -100]} rotation={[Math.PI / 2, 0, 0]} />
+      <Floor position={[0, 0, 60]} rotation={[Math.PI / 2, 0, 0]} />
+      <Floor position={[80, 0, -20]} rotation={[Math.PI / 2, 0, Math.PI / 2]} />
+      <Floor
+        position={[-80, 0, -20]}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+      />
+      <Floor position={[0, -80, -20]} rotation={[0, 0, 0]} />
+      <Floor position={[0, 80, -20]} rotation={[0, 0, 0]} />
     </>
   );
 };

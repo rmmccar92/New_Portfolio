@@ -6,13 +6,19 @@ import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
 
 const Home = () => {
+  const camera = useRef();
+
   return (
     <div className={css.scene}>
       <Canvas
         shadows={true}
         className={css.canvas}
         camera={{
-          position: [-6, 7, 7],
+          position: [0, 18, 10],
+          fov: 45,
+          near: 0.1,
+          far: 1000,
+          ref: camera,
         }}
       >
         <Scene />
