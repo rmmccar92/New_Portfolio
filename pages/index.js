@@ -5,21 +5,23 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
 
-const Home = () => {
-  const camera = useRef();
+// TODO: Add a loading screen
+// TODO: investigate sketchfab
+// TODO: add a 3d model
+// TODO: add sidebar
 
+const Home = () => {
   return (
     <div className={css.scene}>
       <Canvas
         shadows={true}
         className={css.canvas}
-        camera={{
-          position: [0, 18, 10],
-          fov: 45,
-          near: 0.1,
-          far: 1000,
-          ref: camera,
-        }}
+        // camera={{
+        //   position: [0, 18, 10],
+        //   fov: 45,
+        //   near: 0.1,
+        //   far: 1000,
+        // }}
       >
         <Scene />
       </Canvas>

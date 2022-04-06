@@ -10,23 +10,31 @@ const Box = () => {
   const [active, setActive] = useState(false);
   const props = useSpring({
     scale: active ? 1.5 : 1,
-    color: hovered ? "violet" : "silver",
+    color: hovered ? "violet" : "grey",
     config: config.wobbly,
   });
   useFrame(() => (mesh.current.rotation.x += 0.001));
+  useFrame(() => (mesh.current.rotation.y += 0.001));
+  useFrame(() => (mesh.current.rotation.z += 0.001));
   return (
-    <animated.mesh
-      {...props}
-      receiveShadow={true}
-      castShadow={true}
-      ref={mesh}
-      onPointerOver={(e) => setHovered(true)}
-      onPointerOut={(e) => setHovered(false)}
-      onClick={(e) => setActive(!active)}
-    >
-      <boxBufferGeometry args={[2, 2, 2]} />
-      <animated.meshPhysicalMaterial attach="material" color={props.color} />
-    </animated.mesh>
+    <>
+      <animated.mesh
+        {...props}
+        receiveShadow={true}
+        castShadow={true}
+        ref={mesh}
+        onPointerOver={(e) => setHovered(true)}
+        onPointerOut={(e) => setHovered(false)}
+        onClick={(e) => setActive(!active)}
+      >
+        <boxBufferGeometry args={[1, 1, 1]} />
+        <animated.meshPhysicalMaterial
+          reflectivity={0.5}
+          attach="material"
+          color={props.color}
+        />
+      </animated.mesh>
+    </>
   );
 };
 
