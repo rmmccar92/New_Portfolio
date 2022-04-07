@@ -1,0 +1,6 @@
+.sidebar{
+    background-color: black;
+    border: red solid 1px;
+    position: absolute;
+    float: right;
+}
