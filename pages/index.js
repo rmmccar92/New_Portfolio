@@ -1,9 +1,10 @@
 // index.jsx
 import css from "../styles/Home.module.css";
-import React, { useState, useRef, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
+import Skybox from "../components/Skybox";
 import SideBar from "../components/SideBar";
 
 // TODO: Add a loading screen
