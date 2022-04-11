@@ -21,7 +21,7 @@ const Scene = () => {
   return (
     <>
       <ambientLight color="white" intensity={0.3} />
-      {/* <fog attach="fog" args={["black", 0, 140]} /> */}
+      <fog attach="fog" args={["black", 0, 140]} />
       <Suspense fallback={null}>
         {spheres.map((_, i) => (
           <FakeSphere

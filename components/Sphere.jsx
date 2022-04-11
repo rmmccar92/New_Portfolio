@@ -4,13 +4,20 @@ import { TextureLoader } from "three";
 
 const Sphere = (props) => {
   const texture = useLoader(TextureLoader, "/images/moon_texture.jpg");
+  const normalMap = useLoader(TextureLoader, "/images/normal_map_MOON.png");
   const mesh = useRef();
   useFrame(() => (mesh.current.rotation.y += 0.001));
 
   return (
     <mesh {...props} receiveShadow={true} castShadow={true} ref={mesh}>
-      <sphereBufferGeometry args={[2, 30, 10]} clearcoat={1} />
-      <meshPhysicalMaterial map={texture} color="white" />
+      <sphereBufferGeometry args={[4, 400, 40]} />
+      <meshPhysicalMaterial
+        attach="material"
+        map={texture}
+        normalMap={normalMap}
+        roughness={2}
+        color="white"
+      />
     </mesh>
   );
 };

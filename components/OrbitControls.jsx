@@ -12,8 +12,8 @@ function Controls() {
   return (
     <orbitControls
       autoRotate
-      maxPolarAngle={Math.PI / 2}
-      minPolarAngle={Math.PI / 4}
+      // maxPolarAngle={Math.PI / 2}
+      // minPolarAngle={Math.PI / 4}
       autoRotateSpeed={0.25}
       args={[camera, gl.domElement]}
       ref={orbitRef}
