@@ -6,6 +6,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MuiNextLink from "./MuiNextLink";
+// import styles from "../styles/SideBar.module.css";
 
 const drawerWidth = 280;
 
@@ -17,16 +18,15 @@ function SideBar({ navLinks }) {
         {navLinks.map(({ title, path, onClick }, index) => (
           <ListItem key={index}>
             <Box
-              className="link-box"
-              // sx={{
-              //   backgroundColor: `rgba(192, 192, 192, 0.3)`,
-              //   backdropFilter: `blur(5px)`,
-              //   margin: `0.5em`,
-              //   width: `100%`,
-              //   textAlign: `center`,
-              //   borderTopRightRadius: `40px`,
-              //   borderBottomRightRadius: `40px`,
-              // }}
+              sx={{
+                backgroundColor: `rgba(192, 192, 192, 0.3)`,
+                backdropFilter: `blur(5px)`,
+                margin: `0.5em`,
+                width: `100%`,
+                textAlign: `center`,
+                borderTopRightRadius: `40px`,
+                borderBottomRightRadius: `40px`,
+              }}
             >
               <ListItemText>
                 <MuiNextLink href={path} color="#ffffff">

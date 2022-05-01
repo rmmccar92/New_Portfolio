@@ -4,7 +4,6 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
-import Skybox from "../components/Skybox";
 import SideBar from "../components/SideBar";
 
 // TODO: Make Custom skybox images in PS
