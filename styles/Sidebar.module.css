@@ -1,6 +1,10 @@
 .sidebar{
-    background-color: black;
-    border: red solid 1px;
+    background-color: transparent;
+    /* border: red solid 1px; */
     position: absolute;
-    float: right;
+    top: 0;
+    /* float: right; */
+    width: 25%;
+    height: 100%;
+    z-index: 999;
 }

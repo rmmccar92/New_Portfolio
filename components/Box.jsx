@@ -4,7 +4,7 @@ import { TextureLoader } from "three";
 import { useSpring, animated, config } from "@react-spring/three";
 
 const Box = () => {
-  const texture = useLoader(TextureLoader, "/images/skybox.jpg");
+  // const texture = useLoader(TextureLoader, "/images/skybox.jpg");
   const mesh = useRef();
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);

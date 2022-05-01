@@ -7,11 +7,18 @@ import Scene from "../components/Scene";
 import Skybox from "../components/Skybox";
 import SideBar from "../components/SideBar";
 
+// TODO: Make Custom skybox images in PS
 // TODO: Add a loading screen
 // TODO: investigate sketchfab
 // TODO: add a 3d model
 // TODO: finalize the design
 // TODO: add sidebar
+export const navLinks = [
+  { title: `Home`, path: `/` },
+  { title: "Projects", path: "/projects" },
+  { title: "Links", path: "/links" },
+  { title: "About", path: "/about" },
+];
 
 const Home = () => {
   return (
@@ -29,8 +36,8 @@ const Home = () => {
         >
           <Scene />
         </Canvas>
+        <SideBar navLinks={navLinks} />
       </div>
-      {/* <SideBar /> */}
     </>
   );
 };
