@@ -16,7 +16,7 @@ function MyApp(props) {
         <title>RMM Portfolio</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </CacheProvider>
   );
 }
