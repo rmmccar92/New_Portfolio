@@ -20,7 +20,7 @@ function SideBar({ navLinks }) {
             key={index}
             sx={{
               // border: `rgba(192, 192, 192, 0.045) 1px solid`,
-
+              padding: `0.5em 0 0.5em 0`,
               "&:after": {
                 content: `''`,
                 // display: "inline-block",
@@ -51,6 +51,7 @@ function SideBar({ navLinks }) {
                 backgroundColor: `rgba(192, 192, 192, 0.3)`,
                 backdropFilter: `blur(5px)`,
                 margin: `0.5em 0 0.5em 0`,
+                padding: `0`,
                 width: `100%`,
                 textAlign: `center`,
               }}
