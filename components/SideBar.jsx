@@ -1,20 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import MuiNextLink from "./MuiNextLink";
-import Router from "next/router";
 
 const drawerWidth = 280;
 
@@ -26,15 +17,16 @@ function SideBar({ navLinks }) {
         {navLinks.map(({ title, path, onClick }, index) => (
           <ListItem key={index}>
             <Box
-              sx={{
-                backgroundColor: `rgba(192, 192, 192, 0.3)`,
-                backdropFilter: `blur(5px)`,
-                margin: `0.5em`,
-                width: `100%`,
-                textAlign: `center`,
-                borderTopRightRadius: `40px`,
-                borderBottomRightRadius: `40px`,
-              }}
+              className="link-box"
+              // sx={{
+              //   backgroundColor: `rgba(192, 192, 192, 0.3)`,
+              //   backdropFilter: `blur(5px)`,
+              //   margin: `0.5em`,
+              //   width: `100%`,
+              //   textAlign: `center`,
+              //   borderTopRightRadius: `40px`,
+              //   borderBottomRightRadius: `40px`,
+              // }}
             >
               <ListItemText>
                 <MuiNextLink href={path} color="#ffffff">
