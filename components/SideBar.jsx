@@ -19,27 +19,12 @@ import Router from "next/router";
 const drawerWidth = 280;
 
 function SideBar({ navLinks }) {
-  // const { window } = navLinks;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
   const drawer = (
     <div className="sideBar">
       <Toolbar border="none" />
       <List>
         {navLinks.map(({ title, path, onClick }, index) => (
           <ListItem key={index}>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? (
-                <InboxIcon className="evenIcons" color="evenIcons" />
-              ) : (
-                <MailIcon className="oddIcons" color="oddIcons" />
-              )}
-            </ListItemIcon> */}
-
             <Box
               sx={{
                 backgroundColor: `rgba(192, 192, 192, 0.3)`,
@@ -63,7 +48,6 @@ function SideBar({ navLinks }) {
   );
 
   return (
-    // <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
     <>
       <Drawer
         variant="permanent"
