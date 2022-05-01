@@ -6,12 +6,13 @@ import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
 import SideBar from "../components/SideBar";
 
+// TODO: Mobile
 // TODO: Make Custom skybox images in PS
 // TODO: Add a loading screen
 // TODO: investigate sketchfab
 // TODO: add a 3d model
 // TODO: finalize the design
-// TODO: add sidebar
+
 export const navLinks = [
   { title: `Home`, path: `/` },
   { title: "Projects", path: "/projects" },

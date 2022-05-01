@@ -12,15 +12,30 @@ const drawerWidth = 280;
 
 function SideBar({ navLinks }) {
   const drawer = (
-    <div className="sideBar" style={{ overflow: "hidden" }}>
-      <Toolbar border="none" />
-      <List>
+    <div
+      style={{
+        overflow: "hidden",
+      }}
+    >
+      <List
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          height: "100vh",
+        }}
+      >
         {navLinks.map(({ title, path, onClick }, index) => (
           <ListItem
             key={index}
             sx={{
               // border: `rgba(192, 192, 192, 0.045) 1px solid`,
               padding: `0.5em 0 0.5em 0`,
+              transition: "transform .5s, position .5s, height .5s ease-out",
+              "&:hover": {
+                transform: "scale(1.1)",
+              },
               "&:after": {
                 content: `''`,
                 // display: "inline-block",
@@ -38,9 +53,12 @@ function SideBar({ navLinks }) {
                 borderBottom: "1em solid transparent",
                 borderRight: "1em solid rgba(159, 158, 167, 0.451)",
                 // filter: "blur(0.4px)",
-                "&:hover": {
-                  display: "none",
-                },
+              },
+              "&:hover:before": {
+                display: "none",
+              },
+              "&:hover:after": {
+                display: "none",
               },
             }}
           >
@@ -54,6 +72,12 @@ function SideBar({ navLinks }) {
                 padding: `0`,
                 width: `100%`,
                 textAlign: `center`,
+                transition:
+                  "transform .5s, position .5s, height .5s ease-out, background-color .75s ease-in",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                  backgroundColor: `rgba(192, 192, 192, 1)`,
+                },
               }}
             >
               <ListItemText>
