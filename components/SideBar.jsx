@@ -32,7 +32,8 @@ function SideBar({ navLinks }) {
                 margin: `0.5em`,
                 width: `100%`,
                 textAlign: `center`,
-                borderRadius: `10px/50%`,
+                borderTopRightRadius: `40px`,
+                borderBottomRightRadius: `40px`,
               }}
             >
               <ListItemText>
