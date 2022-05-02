@@ -6,7 +6,8 @@ import { useCubeTexture } from "@react-three/drei";
 const Skybox = () => {
   const { scene } = useThree();
   const texture = useCubeTexture(
-    ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+    // 4 1 Top Bottom 3 2
+    ["cat.jpg", "7a.jpg", "extra5.jpg", "5b.jpg", "12c.png", "10a.jpg"],
     { path: "/images/" }
   );
   scene.background = texture;

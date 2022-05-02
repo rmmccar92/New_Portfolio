@@ -25,14 +25,16 @@ const Home = () => {
     <>
       <div className={css.scene}>
         <Canvas
+          linear
+          flat
           shadows={true}
           className={css.canvas}
-          // camera={{
-          //   position: [0, 18, 10],
-          //   fov: 45,
-          //   near: 0.1,
-          //   far: 1000,
-          // }}
+          camera={{
+            position: [0, 9, 20],
+            //   fov: 45,
+            //   near: 0.1,
+            //   far: 1000,
+          }}
         >
           <Scene />
         </Canvas>
