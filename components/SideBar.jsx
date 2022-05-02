@@ -1,7 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
-import Box from "@mui/material/Box";
+import { Box, Container } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
-import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -12,9 +10,12 @@ const drawerWidth = 280;
 
 function SideBar({ navLinks }) {
   const drawer = (
-    <div
-      style={{
-        overflow: "hidden",
+    <Container
+      sx={{
+        backgroundColor: `rgba(7, 7, 7, 0.726)`,
+        backdropFilter: `blur(5px)`,
+        overflow: `hidden`,
+        height: "100vh",
       }}
     >
       <List
@@ -32,7 +33,7 @@ function SideBar({ navLinks }) {
             sx={{
               // border: `rgba(192, 192, 192, 0.045) 1px solid`,
               padding: `0.5em 0 0.5em 0`,
-              transition: "transform .5s, position .5s, height .5s ease-out",
+              transition: "transform .25s,",
               "&:hover": {
                 transform: "scale(1.1)",
               },
@@ -73,10 +74,12 @@ function SideBar({ navLinks }) {
                 width: `100%`,
                 textAlign: `center`,
                 transition:
-                  "transform .5s, position .5s, height .5s ease-out, background-color .75s ease-in",
+                  "transform .5s, background-color .5s, border-top-right-radius .5s ease-in-out, border-bottom-right-radius .5s ease-in-out",
                 "&:hover": {
                   transform: "scale(1.1)",
-                  backgroundColor: `rgba(192, 192, 192, 1)`,
+                  backgroundColor: `rgba(58, 56, 78, 0.896)`,
+                  borderTopRightRadius: `0.75em`,
+                  borderBottomRightRadius: `0.75em`,
                 },
               }}
             >
@@ -89,7 +92,7 @@ function SideBar({ navLinks }) {
           </ListItem>
         ))}
       </List>
-    </div>
+    </Container>
   );
 
   return (
