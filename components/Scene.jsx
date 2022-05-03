@@ -17,30 +17,23 @@ const Scene = () => {
     <>
       <ambientLight color="white" intensity={0.3} />
       <fog attach="fog" args={["black", 0, 140]} />
-      <Suspense fallback={null}>
-        {spheres.map((_, i) => (
-          <FakeSphere
-            key={i}
-            color={"white"}
-            position={[
-              MathUtils.randFloatSpread(125),
-              MathUtils.randFloatSpread(125),
-              MathUtils.randFloatSpread(125),
-            ]}
-          />
-        ))}
-      </Suspense>
-      <Suspense fallback={null}>
-        <spotLight position={[0, 5, 10]} penumbra={1} />
-        <Box />
-      </Suspense>
+      {spheres.map((_, i) => (
+        <FakeSphere
+          key={i}
+          color={"white"}
+          position={[
+            MathUtils.randFloatSpread(125),
+            MathUtils.randFloatSpread(125),
+            MathUtils.randFloatSpread(125),
+          ]}
+        />
+      ))}
+
+      <spotLight position={[0, 5, 10]} penumbra={1} />
+      <Box />
       {/* <Plane position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} /> */}
-      <Suspense fallback={null}>
-        <Sphere position={[0, 5, 0]} />
-      </Suspense>
-      <Suspense fallback={null}>
-        <Skybox />
-      </Suspense>
+      <Sphere position={[0, 5, 0]} />
+      <Skybox />
       <Controls />
       {/* <Floor position={[0, 0, -100]} rotation={[Math.PI / 2, 0, 0]} />
       <Floor position={[0, 0, 60]} rotation={[Math.PI / 2, 0, 0]} />

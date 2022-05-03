@@ -13,9 +13,8 @@ const Box = () => {
     color: hovered ? "violet" : "grey",
     config: config.wobbly,
   });
-  useFrame(() => (mesh.current.rotation.x += 0.001));
+  useFrame(() => (mesh.current.rotation.z += Math.PI / 720));
   useFrame(() => (mesh.current.rotation.y += 0.001));
-  useFrame(() => (mesh.current.rotation.z += 0.001));
   return (
     <>
       <animated.mesh

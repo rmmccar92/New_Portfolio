@@ -74,10 +74,10 @@ function SideBar({ navLinks }) {
                 width: `100%`,
                 textAlign: `center`,
                 transition:
-                  "transform .5s, background-color .5s, border-top-right-radius .5s ease-in-out, border-bottom-right-radius .5s ease-in-out",
+                  "transform .5s, color .25s, background-color .25s, border-top-right-radius .5s ease-in-out, border-bottom-right-radius .5s ease-in-out",
                 "&:hover": {
                   transform: "scale(1.1)",
-                  backgroundColor: `rgba(58, 56, 78, 0.896)`,
+                  backgroundColor: `#00cd94`,
                   borderTopRightRadius: `0.75em`,
                   borderBottomRightRadius: `0.75em`,
                 },
