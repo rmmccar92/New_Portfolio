@@ -1,13 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import Floor from "./Floor";
+import React, { useState, useRef, useEffect, Suspense } from "react";
 import Box from "./Box";
-// import { useHelper } from "@react-three/drei";
 // import Draggable from "../components/Draggable";
-import { Suspense } from "react";
 import Sphere from "./Sphere";
-// import { GridHelper } from "three";
 import Controls from "./OrbitControls";
-import Plane from "./Plane";
 import FakeSphere from "./FakeSphere";
 import { MathUtils } from "three";
 import Skybox from "./Skybox";

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
-import { TextureLoader } from "three";
+// import { TextureLoader } from "three";
 import { useSpring, animated, config } from "@react-spring/three";
 
 const Box = () => {

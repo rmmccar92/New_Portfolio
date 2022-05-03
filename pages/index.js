@@ -36,7 +36,9 @@ const Home = () => {
             //   far: 1000,
           }}
         >
-          <Scene />
+          <Suspense fallback={null}>
+            <Scene />
+          </Suspense>
         </Canvas>
         <SideBar navLinks={navLinks} />
       </div>
