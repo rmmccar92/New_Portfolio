@@ -4,6 +4,9 @@ import { useLoader, useFrame } from "@react-three/fiber";
 import { useSpring, animated, config } from "@react-spring/three";
 
 const Box = () => {
+  const r = 35;
+  const theta = 0;
+  const dTheta = (2 * Math.PI) / 1000;
   // const texture = useLoader(TextureLoader, "/images/skybox.jpg");
   const mesh = useRef();
   const [hovered, setHovered] = useState(false);
@@ -13,8 +16,8 @@ const Box = () => {
     color: hovered ? "violet" : "grey",
     config: config.wobbly,
   });
-  useFrame(() => (mesh.current.rotation.z += Math.PI / 720));
-  useFrame(() => (mesh.current.rotation.y += 0.001));
+  useFrame(() => (mesh.current.position.z += Math.PI / 720));
+  useFrame(() => (mesh.current.position.y += Math.PI / 720));
   return (
     <>
       <animated.mesh

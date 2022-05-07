@@ -6,6 +6,8 @@ import Controls from "./OrbitControls";
 import FakeSphere from "./FakeSphere";
 import { MathUtils } from "three";
 import Skybox from "./Skybox";
+import Block from "./Block";
+// import Material from "./Material";
 
 const Scene = () => {
   const NUM = 100;
@@ -30,7 +32,9 @@ const Scene = () => {
       ))}
 
       <spotLight position={[0, 5, 10]} penumbra={1} />
-      <Box />
+      {/* <Box /> */}
+      <Block />
+      {/* <Material /> */}
       {/* <Plane position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} /> */}
       <Sphere position={[0, 5, 0]} />
       <Skybox />
