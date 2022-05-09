@@ -2,7 +2,7 @@ import { useRef } from "react";
 import * as THREE from "three";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
 import { Center, shaderMaterial, Plane } from "@react-three/drei";
-import { vertexShader, fragmentShader } from "./Shader";
+import { vertexShader, fragmentShader } from "../shaders/Shader";
 
 const NoiseMaterial = shaderMaterial(
   {
