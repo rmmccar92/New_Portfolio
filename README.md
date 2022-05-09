@@ -8,7 +8,13 @@ Keeping track of links that helped me build this site.
 
 - <https://docs.pmnd.rs/react-three-fiber/getting-started/introduction>
 
+- <https://mui.com/>
+
+- <https://react-spring.io/>
+
 # Tutorials and Miscellaneous Resources
+
+- <https://www.youtube.com/watch?v=Q7AOvWpIVHU>
 
 - <https://www.youtube.com/watch?v=1rP3nNY2hTo>
 
