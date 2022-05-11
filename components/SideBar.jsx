@@ -4,11 +4,11 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MuiNextLink from "./MuiNextLink";
-// import styles from "../styles/SideBar.module.css";
+import MuiLink from "@mui/material/Link";
 
 const drawerWidth = 280;
 
-function SideBar({ navLinks }) {
+function SideBar({ navLinks, handleClick, currentComponent }) {
   const drawer = (
     <Container
       sx={{
@@ -84,7 +84,14 @@ function SideBar({ navLinks }) {
               }}
             >
               <ListItemText>
-                <MuiNextLink href={path} color="#ffffff">
+                <MuiNextLink
+                  onClick={() => handleClick(title)}
+                  href="#"
+                  color="#ffffff"
+                  className={
+                    currentComponent === title ? "active" : "not-active"
+                  }
+                >
                   {title}
                 </MuiNextLink>
               </ListItemText>

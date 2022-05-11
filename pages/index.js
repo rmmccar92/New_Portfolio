@@ -1,10 +1,13 @@
 // index.jsx
 import css from "../styles/Home.module.css";
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
 import SideBar from "../components/SideBar";
+import AboutCom from "../components/AboutCom";
+import ProjectsCom from "../components/ProjectsCom";
+import LinksCom from "../components/LinksCom";
 
 // TODO: Mobile
 // TODO: Make Custom skybox images in PS
@@ -21,6 +24,24 @@ export const navLinks = [
 ];
 
 const Home = () => {
+  const [currentComponent, setCurrentComponent] = useState("");
+
+  const renderComponent = () => {
+    switch (currentComponent) {
+      case "Home":
+        return <Scene />;
+      case "About":
+        return <AboutCom />;
+      case "Projects":
+        return <ProjectsCom />;
+      case "Links":
+        return <LinksCom />;
+      default:
+        return <Scene />;
+    }
+  };
+
+  const handleClick = (component) => setCurrentComponent(component);
   return (
     <>
       <div className={css.scene}>
@@ -40,7 +61,11 @@ const Home = () => {
             <Scene />
           </Suspense>
         </Canvas>
-        <SideBar navLinks={navLinks} />
+        <SideBar
+          currentComponent={currentComponent}
+          handleClick={handleClick}
+          navLinks={navLinks}
+        />
       </div>
     </>
   );
