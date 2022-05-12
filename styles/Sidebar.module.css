@@ -1,11 +1,8 @@
 .sidebar{
     background-color: transparent;
-    /* border: red solid 1px; */
     position: absolute;
     top: 0;
-    /* float: right; */
     width: 25%;
     height: 100%;
     z-index: 999;
-    /* color: rgba(58, 56, 78, 0.896) */
 }

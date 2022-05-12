@@ -46,7 +46,7 @@ const Home = () => {
   return (
     <>
       <div className={css.scene}>
-        {/* <Canvas
+        <Canvas
           linear
           flat
           shadows={true}
@@ -61,7 +61,7 @@ const Home = () => {
           <Suspense fallback={null}>
             <Scene />
           </Suspense>
-        </Canvas> */}
+        </Canvas>
         <SideBar
           currentComponent={currentComponent}
           handleClick={handleClick}

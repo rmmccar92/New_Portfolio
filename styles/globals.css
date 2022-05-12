@@ -14,3 +14,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.popOut {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  justify-self: flex-start;
+  margin: auto;
+  color: whitesmoke;
+  width: 60%;
+  height: 75%;
+  background-color: rgba(7, 7, 7, 0.726);
+  background: radial-gradient(
+    rgba(192, 192, 192, 0.045),
+    rgba(7, 7, 7, 0.726),
+    rgba(25, 4, 117, 0.587)60%,
+    rgba(7, 7, 7, 0.726)
+  );
+  border-radius: 15px;
+  border: solid 1px rgb(74, 72, 72);
+  z-index: 9999;
+}

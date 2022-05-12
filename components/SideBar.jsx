@@ -86,7 +86,7 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
               <ListItemText>
                 <MuiNextLink
                   onClick={() => handleClick(title)}
-                  href="/"
+                  href=""
                   color="#ffffff"
                   className={
                     currentComponent === title ? "active" : "not-active"
