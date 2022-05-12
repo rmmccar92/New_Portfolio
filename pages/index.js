@@ -8,6 +8,7 @@ import SideBar from "../components/SideBar";
 import AboutCom from "../components/AboutCom";
 import ProjectsCom from "../components/ProjectsCom";
 import LinksCom from "../components/LinksCom";
+import { Container } from "@mui/material";
 
 // TODO: Mobile
 // TODO: Make Custom skybox images in PS
@@ -37,7 +38,7 @@ const Home = () => {
       case "Links":
         return <LinksCom />;
       default:
-        return <Scene />;
+        return "";
     }
   };
 
@@ -45,7 +46,7 @@ const Home = () => {
   return (
     <>
       <div className={css.scene}>
-        <Canvas
+        {/* <Canvas
           linear
           flat
           shadows={true}
@@ -60,12 +61,13 @@ const Home = () => {
           <Suspense fallback={null}>
             <Scene />
           </Suspense>
-        </Canvas>
+        </Canvas> */}
         <SideBar
           currentComponent={currentComponent}
           handleClick={handleClick}
           navLinks={navLinks}
         />
+        {renderComponent()}
       </div>
     </>
   );
