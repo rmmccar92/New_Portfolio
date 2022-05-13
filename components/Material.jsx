@@ -10,9 +10,9 @@ const NoiseMaterial = shaderMaterial(
     size: 0.2,
     density: 4.0,
     time: 0.0,
-    bg: new THREE.Color("#111033"),
-    yellow: new THREE.Color("#ffd600"),
-    orange: new THREE.Color("#ff7300"),
+    bg: new THREE.Color("#1f065c"),
+    yellow: new THREE.Color("#4f04c7"),
+    orange: new THREE.Color("#e0dd02"),
   },
   vertexShader,
   fragmentShader
