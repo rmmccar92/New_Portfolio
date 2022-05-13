@@ -21,8 +21,8 @@ export const fragmentShader = glsl`
   uniform float time;
 
   uniform vec3 bg;
-  uniform vec3 yellow;
-  uniform vec3 orange;
+  uniform vec3 highlight1;
+  uniform vec3 highlight2;
 
   varying vec2 vUv;
 
@@ -39,7 +39,7 @@ export const fragmentShader = glsl`
   }
 
   vec3 gradient() {
-    return mix(orange, yellow, vUv.x + vUv.y);
+    return mix(highlight2, highlight1, vUv.x + vUv.y);
   }
 
   float box(vec2 st, vec2 w){

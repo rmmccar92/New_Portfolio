@@ -31,7 +31,7 @@ a {
   background-color: rgba(7, 7, 7, 0.726);
   background: radial-gradient(
     rgba(192, 192, 192, 0.045),
-    rgba(7, 7, 7, 0.726),
+    rgba(7, 7, 7, 0.726)20%,
     rgba(25, 4, 117, 0.587)60%,
     rgba(7, 7, 7, 0.726)
   );

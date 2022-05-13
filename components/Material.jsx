@@ -6,13 +6,13 @@ import { vertexShader, fragmentShader } from "../shaders/Shader";
 
 const NoiseMaterial = shaderMaterial(
   {
-    scale: 1.5,
-    size: 0.2,
-    density: 4.0,
+    scale: 2.5,
+    size: 0.25,
+    density: 2.5,
     time: 0.0,
-    bg: new THREE.Color("#1f065c"),
-    yellow: new THREE.Color("#4f04c7"),
-    orange: new THREE.Color("#e0dd02"),
+    bg: new THREE.Color("rgb(19, 18, 0)"),
+    highlight1: new THREE.Color("#1f065c"),
+    highlight2: new THREE.Color("cyan"),
   },
   vertexShader,
   fragmentShader
@@ -23,7 +23,7 @@ const MaterialDemo = () => {
 
   useFrame(({ clock }) => {
     material.current.uniforms.time.value = Math.sin(
-      (2 * Math.PI * clock.getElapsedTime()) / 10
+      (2 * Math.PI * clock.getElapsedTime()) / 25
     );
   });
 
