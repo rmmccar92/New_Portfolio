@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import Plane from "./Plane";
 import Material from "./Material";
 import style from "../styles/Popout.module.css";
 const AboutCom = () => {
