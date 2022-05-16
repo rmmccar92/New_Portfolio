@@ -1,12 +1,8 @@
-import React, { useState, useRef, useEffect, Suspense } from "react";
-import Box from "./Box";
 import Sphere from "./Sphere";
 import Controls from "./OrbitControls";
 import FakeSphere from "./FakeSphere";
 import { MathUtils } from "three";
 import Skybox from "./Skybox";
-import Block from "./Block";
-import Material from "./Material";
 
 const Scene = () => {
   const NUM = 100;

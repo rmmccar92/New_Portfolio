@@ -48,6 +48,7 @@ const Home = () => {
         <Canvas
           linear
           flat
+          onClick={() => handleClick("Home")}
           shadows={true}
           className={css.canvas}
           camera={{

@@ -14,7 +14,7 @@ const ProjectsCom = () => {
         {data.projects.map((project) => {
           return (
             <>
-              <h1 key={project.index}>{project.title}</h1>
+              <h1 key={project.title}>{project.title}</h1>
               <p>{project.description}</p>
               <Image
                 src={project.image}
