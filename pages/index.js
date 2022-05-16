@@ -8,7 +8,6 @@ import SideBar from "../components/SideBar";
 import AboutCom from "../components/AboutCom";
 import ProjectsCom from "../components/ProjectsCom";
 import LinksCom from "../components/LinksCom";
-import { Container } from "@mui/material";
 
 // TODO: Mobile
 // TODO: Make Custom skybox images in PS

@@ -70,7 +70,7 @@ const data = {
       description:
         "A full stack web application used to track and store a personal pokemon card collection. The site uses the full stack functionality of NextJS with MongoDB for storage and MUI for styled components.",
       repo: "https://ptc-binder-v2-4kml8079p-team-mc.vercel.app/",
-      image: "/images/ProjectImgs/",
+      image: "/images/ProjectImgs/pokeball.svg",
       technologies: [
         "HTML5",
         "CSS3",
@@ -91,3 +91,5 @@ const data = {
     },
   ],
 };
+
+export default data;

@@ -4,7 +4,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MuiNextLink from "./MuiNextLink";
-import MuiLink from "@mui/material/Link";
 
 const drawerWidth = 280;
 
