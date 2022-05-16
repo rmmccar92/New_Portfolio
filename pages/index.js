@@ -29,7 +29,7 @@ const Home = () => {
   const renderComponent = () => {
     switch (currentComponent) {
       case "Home":
-        return <Scene />;
+        return;
       case "About":
         return <AboutCom />;
       case "Projects":
@@ -37,7 +37,7 @@ const Home = () => {
       case "Links":
         return <LinksCom />;
       default:
-        return "";
+        return;
     }
   };
 
