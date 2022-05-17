@@ -4,6 +4,10 @@ import FakeSphere from "./FakeSphere";
 import { MathUtils } from "three";
 import Skybox from "./Skybox";
 
+const randX = () => MathUtils.randFloatSpread(225);
+const randY = () => MathUtils.randFloatSpread(225);
+const randZ = () => MathUtils.randFloatSpread(225);
+
 const Scene = () => {
   const NUM = 100;
   const spheres = new Array(NUM).fill();
@@ -15,11 +19,7 @@ const Scene = () => {
         <FakeSphere
           key={i}
           color={"white"}
-          position={[
-            MathUtils.randFloatSpread(225),
-            MathUtils.randFloatSpread(225),
-            MathUtils.randFloatSpread(225),
-          ]}
+          position={[randX(), randY(), randZ()]}
         />
       ))}
 

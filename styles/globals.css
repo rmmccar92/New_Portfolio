@@ -39,3 +39,10 @@ a {
   border: solid 1px rgb(74, 72, 72);
   z-index: 9999;
 }
+
+.swiper-slide-next{
+  opacity: 0;
+  }
+  .swiper-slide-prev{
+  opacity: 0;
+  }
