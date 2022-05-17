@@ -16,16 +16,14 @@ const Scene = () => {
           key={i}
           color={"white"}
           position={[
-            MathUtils.randFloatSpread(125),
-            MathUtils.randFloatSpread(125),
-            MathUtils.randFloatSpread(125),
+            MathUtils.randFloatSpread(225),
+            MathUtils.randFloatSpread(225),
+            MathUtils.randFloatSpread(225),
           ]}
         />
       ))}
 
       <spotLight position={[0, 5, 10]} penumbra={1} />
-      {/* <Block />
-      <Material /> */}
       <Sphere position={[0, 5, 0]} />
       <Skybox />
       <Controls />

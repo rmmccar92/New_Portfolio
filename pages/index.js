@@ -9,12 +9,11 @@ import AboutCom from "../components/AboutCom";
 import ProjectsCom from "../components/ProjectsCom";
 import LinksCom from "../components/LinksCom";
 
-// TODO: Mobile
-// TODO: Make Custom skybox images in PS
 // TODO: Add a loading screen
 // TODO: investigate sketchfab
-// TODO: add a 3d model
-// TODO: finalize the design
+// TODO: add a contact page
+// TODO: add a resume page
+// TODO: toggle controls
 
 export const navLinks = [
   { title: `Home`, path: `/` },
@@ -53,6 +52,7 @@ const Home = () => {
           className={css.canvas}
           camera={{
             position: [0, 9, 20],
+
             //   fov: 45,
             //   near: 0.1,
             //   far: 1000,
