@@ -13,39 +13,37 @@ const ProjectsCom = () => {
       <Canvas className={style.aboutCanvas}>
         <Material />
       </Canvas>
-      <Container sx={{ position: "absolute", mt: "15%" }}>
-        <Carousel
-          infiniteLoop
-          autoPlay
-          emulateTouch
-          interval={5000}
-          preventMovementUntilSwipeScrollTolerance
-          showThumbs={false}
-        >
-          {data.projects.map((project, index) => {
-            return (
-              <div key={index}>
-                <div className={style.aboutCarousel}>
-                  <div className={style.aboutCarouselImg}>
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                  <div className={style.aboutCarouselText}>
-                    <Typography variant="h5">{project.title}</Typography>
-                    <Typography variant="body1">
-                      {project.description}
-                    </Typography>
-                  </div>
+      <Carousel
+        infiniteLoop
+        autoPlay
+        emulateTouch
+        interval={5000}
+        preventMovementUntilSwipeScrollTolerance
+        showThumbs={false}
+        className={style.carousel}
+      >
+        {data.projects.map((project, index) => {
+          return (
+            <div key={index}>
+              <div className={style.aboutCarousel}>
+                <div className={style.aboutCarouselImg}>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={300}
+                    height={300}
+                    objectFit="cover"
+                  />
+                </div>
+                <div className={style.aboutCarouselText}>
+                  <Typography variant="h5">{project.title}</Typography>
+                  <Typography variant="body1">{project.description}</Typography>
                 </div>
               </div>
-            );
-          })}
-        </Carousel>
-      </Container>
+            </div>
+          );
+        })}
+      </Carousel>
     </div>
   );
 };
