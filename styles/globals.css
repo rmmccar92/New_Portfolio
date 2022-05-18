@@ -20,7 +20,7 @@ a {
   top: 10%;
   left: 25%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   color: whitesmoke;
   width: 60%;

@@ -18,9 +18,15 @@ const ProjectsCom = () => {
         autoPlay
         emulateTouch
         interval={5000}
+        swipeScrollTolerance={10}
         preventMovementUntilSwipeScrollTolerance
         showThumbs={false}
         className={style.carousel}
+        showStatus={false}
+        showArrows
+        showIndicators={false}
+        useKeyboardArrows
+        width="95%"
       >
         {data.projects.map((project, index) => {
           return (
