@@ -10,6 +10,12 @@
     left: 25%;
 }
 
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .test {
     color: rgb(19, 18, 85)
 }

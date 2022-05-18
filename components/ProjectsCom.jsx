@@ -1,17 +1,11 @@
 import { Canvas } from "@react-three/fiber";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import Material from "./Material";
 import style from "../styles/Popout.module.css";
 import data from "../data/projects.js";
 import Image from "next/image";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProjectsCom = () => {
   return (
@@ -19,44 +13,39 @@ const ProjectsCom = () => {
       <Canvas className={style.aboutCanvas}>
         <Material />
       </Canvas>
-      <div className={style.aboutText}>
-        <Container>
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            effect={("fade", { fadeEffect: { crossFade: true } })}
-            loop={true}
-            // pagination={{
-            //   clickable: true,
-            // }}
-            // navigation={true}
-            modules={[Autoplay, EffectFade, Pagination, Navigation]}
-          >
-            {data.projects.map((project) => {
-              return (
-                <SwiperSlide
-                  key={project.title}
-                  style={{ width: "25em", height: "25em" }}
-                >
-                  <h1>{project.title}</h1>
-                  <p>{project.description}</p>
-                  <Box
-                    position="relative"
-                    sx={{ width: "40%", height: "100%", bottom: "10em" }}
-                  >
+      <Container sx={{ position: "absolute", mt: "15%" }}>
+        <Carousel
+          infiniteLoop
+          autoPlay
+          emulateTouch
+          interval={5000}
+          preventMovementUntilSwipeScrollTolerance
+          showThumbs={false}
+        >
+          {data.projects.map((project, index) => {
+            return (
+              <div key={index}>
+                <div className={style.aboutCarousel}>
+                  <div className={style.aboutCarouselImg}>
                     <Image
                       src={project.image}
                       alt={project.title}
-                      layout="fill"
-                      objectFit="contain"
+                      width={300}
+                      height={300}
                     />
-                  </Box>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </Container>
-      </div>
+                  </div>
+                  <div className={style.aboutCarouselText}>
+                    <Typography variant="h5">{project.title}</Typography>
+                    <Typography variant="body1">
+                      {project.description}
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </Carousel>
+      </Container>
     </div>
   );
 };
