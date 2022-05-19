@@ -4,11 +4,11 @@ import style from "../styles/Popout.module.css";
 
 const LinksCom = (props) => {
   return (
-    <div className="popOut links">
-      <Canvas className={style.aboutCanvas}>
+    <div className={style.popOut}>
+      <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
-      <div className={style.aboutText}>
+      <div className={style.gridText}>
         <h1>Links</h1>
         <ol>
           <li>

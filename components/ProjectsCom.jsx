@@ -9,8 +9,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProjectsCom = () => {
   return (
-    <div className="popOut projects">
-      <Canvas className={style.aboutCanvas}>
+    <div className={style.popOut}>
+      <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
       <Carousel

@@ -1,10 +1,42 @@
-.aboutCanvas {
+.popOut {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    color: whitesmoke;
+    width: 60%;
+    height: 75%;
+    background-color: rgba(7, 7, 7, 0.726);
+    background: radial-gradient(
+      rgba(192, 192, 192, 0.045),
+      rgba(7, 7, 7, 0.726)20%,
+      rgba(25, 4, 117, 0.587)60%,
+      rgba(7, 7, 7, 0.726)
+    );
+    border-radius: 15px;
+    border: solid 1px rgb(74, 72, 72);
+  }
+  
+
+.popOutCanvas {
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 5;
     z-index: 1;
     opacity: 0.5;
+}
+
+.gridText {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    z-index: 2;
+    font-size: 2.5rem;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 

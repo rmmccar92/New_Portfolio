@@ -4,11 +4,11 @@ import style from "../styles/Popout.module.css";
 const AboutCom = () => {
   return (
     <>
-      <div className="popOut about-com">
-        <Canvas className={style.aboutCanvas}>
+      <div className={style.popOut}>
+        <Canvas className={style.popOutCanvas}>
           <Material />
         </Canvas>
-        <div className={style.aboutText}>
+        <div className={style.gridText}>
           <h1>About Com</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
