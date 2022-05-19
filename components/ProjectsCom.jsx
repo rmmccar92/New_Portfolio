@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Container, Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Material from "./Material";
 import style from "../styles/Popout.module.css";
 import data from "../data/projects.js";
@@ -14,39 +14,38 @@ const ProjectsCom = () => {
         <Material />
       </Canvas>
       <Carousel
+        ariaLabel="Projects"
         infiniteLoop
-        autoPlay
         emulateTouch
+        autoFocus
         interval={5000}
-        swipeScrollTolerance={10}
-        preventMovementUntilSwipeScrollTolerance
         showThumbs={false}
         className={style.carousel}
         showStatus={false}
         showArrows
         showIndicators={false}
         useKeyboardArrows
-        width="95%"
       >
         {data.projects.map((project, index) => {
           return (
-            <div key={index}>
-              <div className={style.aboutCarousel}>
-                <div className={style.aboutCarouselImg}>
+            <Container key={index}>
+              <Box className={style.carouselInner}>
+                <Box className={style.carouselImg}>
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={300}
-                    height={300}
-                    objectFit="cover"
+                    layout="responsive"
+                    width={100}
+                    height={100}
+                    objectFit="contain"
                   />
-                </div>
-                <div className={style.aboutCarouselText}>
+                </Box>
+                <Container className={style.carouselText}>
                   <Typography variant="h5">{project.title}</Typography>
                   <Typography variant="body1">{project.description}</Typography>
-                </div>
-              </div>
-            </div>
+                </Container>
+              </Box>
+            </Container>
           );
         })}
       </Carousel>
