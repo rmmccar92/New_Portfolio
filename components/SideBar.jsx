@@ -14,7 +14,8 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
         backgroundColor: `rgba(7, 7, 7, 0.726)`,
         backdropFilter: `blur(5px)`,
         overflow: `hidden`,
-        height: "100vh",
+        height: { xs: "20vh", md: "100vh" },
+        width: { xs: "100%", md: drawerWidth },
       }}
     >
       <List
@@ -22,8 +23,8 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          flexDirection: "column",
-          height: "100vh",
+          flexDirection: { xs: "row", md: "column" },
+          height: { xs: "25vh", md: "100vh" },
         }}
       >
         {navLinks.map(({ title, path, onClick }, index) => (
@@ -70,6 +71,7 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
                 backdropFilter: `blur(5px)`,
                 margin: `0.5em 0 0.5em 0`,
                 padding: `0`,
+                transform: { xs: "rotate(280deg)", md: "rotate(0deg)" },
                 width: `100%`,
                 textAlign: `center`,
                 transition:
@@ -106,10 +108,11 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
       <Drawer
         variant="permanent"
         sx={{
-          display: { xs: "none", sm: "block" },
+          // display: { xs: "none", md: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: drawerWidth,
+            top: { xs: "80%", md: "0" },
+            width: { xs: "100%", md: drawerWidth },
             backgroundColor: "transparent",
             border: "none",
           },

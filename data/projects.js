@@ -89,6 +89,31 @@ const data = {
         ,
       ],
     },
+    {
+      title: "Next E-Commerce",
+      link: "https://next-e-commerce-2-1ebnfmukg-rmmccar92.vercel.app/",
+      description:
+        "A Demo E-Commerce site built with NextJS, MongoDB, amd GraphQL that I made to get more comfortable with NextJS. MUI was used for styling and Paypal was used for payment processing. Additionally the live application was deployed through Vercel.",
+      repo: "https://github.com/rmmccar92/Next_E_Commerce",
+      image: "/images/ProjectImgs/next-e-commerce.png",
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "NextJS",
+        "MUI",
+        "MongoDB",
+        "GraphQL",
+        "Node",
+        "JSCookie",
+        "Axios",
+        "Vercel",
+      ],
+      contributors: [
+        { name: "Ryan McCarthy", ghLink: "https://github.com/rmmccar92" },
+      ],
+    },
   ],
 };
 
