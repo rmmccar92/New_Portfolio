@@ -8,6 +8,7 @@ import SideBar from "../components/SideBar";
 import AboutCom from "../components/AboutCom";
 import ProjectsCom from "../components/ProjectsCom";
 import LinksCom from "../components/LinksCom";
+import ContactCom from "../components/ContactCom";
 
 // TODO: Add a loading screen
 // TODO: investigate sketchfab
@@ -20,6 +21,8 @@ export const navLinks = [
   { title: "Projects", path: "/projects" },
   { title: "Links", path: "/links" },
   { title: "About", path: "/about" },
+  { title: "Resume", path: "/resume" },
+  { title: "Contact", path: "/contact" },
 ];
 
 const Home = () => {
@@ -35,6 +38,10 @@ const Home = () => {
         return <ProjectsCom />;
       case "Links":
         return <LinksCom />;
+      case "Resume":
+        return;
+      case "Contact":
+        return <ContactCom />;
       default:
         return;
     }

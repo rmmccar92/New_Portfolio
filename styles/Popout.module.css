@@ -41,6 +41,10 @@
     /* font-family: 'Roboto', sans-serif; */
 }
 
+.contactForm {
+    margin-top: 0.75em;
+}
+
 
 .carousel {
     grid-column-start: 1;
