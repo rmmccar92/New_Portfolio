@@ -13,20 +13,17 @@ import { Controller, useForm } from "react-hook-form";
 import style from "../styles/Popout.module.css";
 import Material from "./Material";
 import { Canvas } from "@react-three/fiber";
+import { validateEmail } from "../utils/helpers";
 
 export default function ContactCom() {
   const {
     handleSubmit,
     control,
+    reset,
+    register,
     formState: { errors },
   } = useForm();
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!validateEmail(email) || !name || !message) {
-      setErrorMessage("Invalid submission");
-      return;
-    }
+  const handleFormSubmit = async ({ name, email, message }) => {
     const serviceId = "service_3oukn1q";
     const templateId = "template_5jwiz6m";
     const userId = "user_7wTqyhOq9QPQ2coZfDyp9";
@@ -35,15 +32,13 @@ export default function ContactCom() {
       email,
       message,
     };
+    console.log(templateParams);
 
     emailjs
       .send(serviceId, templateId, templateParams, userId)
       .then((response) => console.log(response))
       .then((error) => console.log(error));
-
-    setName("");
-    setMessage("");
-    setEmail("");
+    // reset();
   };
 
   return (
@@ -91,6 +86,7 @@ export default function ContactCom() {
                       <TextField
                         variant="outlined"
                         fullWidth
+                        {...register("name")}
                         error={Boolean(errors.name)}
                         helperText={
                           errors.name
@@ -125,6 +121,7 @@ export default function ContactCom() {
                       <TextField
                         variant="outlined"
                         fullWidth
+                        {...register("email")}
                         error={Boolean(errors.email)}
                         helperText={
                           errors.email
@@ -158,6 +155,7 @@ export default function ContactCom() {
                       <TextField
                         variant="outlined"
                         fullWidth
+                        {...register("message")}
                         multiline
                         maxRows={6}
                         minRows={6}
