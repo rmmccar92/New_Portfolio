@@ -24,21 +24,25 @@ export default function ContactCom() {
     formState: { errors },
   } = useForm();
   const handleFormSubmit = async ({ name, email, message }) => {
-    const serviceId = "service_3oukn1q";
-    const templateId = "template_5jwiz6m";
-    const userId = "user_7wTqyhOq9QPQ2coZfDyp9";
-    const templateParams = {
-      name,
-      email,
-      message,
-    };
-    console.log(templateParams);
+    if (name !== "" && email !== "" && message !== "") {
+      const serviceId = "service_3oukn1q";
+      const templateId = "template_5jwiz6m";
+      const userId = "user_7wTqyhOq9QPQ2coZfDyp9";
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
+      // console.log(templateParams);
 
-    emailjs
-      .send(serviceId, templateId, templateParams, userId)
-      .then((response) => console.log(response))
-      .then((error) => console.log(error));
-    // reset();
+      emailjs
+        .send(serviceId, templateId, templateParams, userId)
+        .then((response) => console.log(response))
+        .then((error) => console.log(error));
+      // reset();
+    } else {
+      return;
+    }
   };
 
   return (
@@ -51,15 +55,21 @@ export default function ContactCom() {
           onSubmit={handleSubmit(handleFormSubmit)}
           className={style.contactForm}
         >
-          <Grid container display="flex" justifyContent={"center"}>
+          <Grid
+            container
+            display="flex"
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
             <Grid
               item
-              xs={8}
-              sm={6}
-              lg={4}
+              xs={6}
+              sm={8}
               sx={{
-                backgroundColor: "rgb(0,0,0)",
-                // boxShadow: "10px -5px 4px white, -10px 5px 4px red",
+                backgroundColor: "rgb(35, 35, 35)",
+                borderRadius: "10px",
+                boxShadow: "2px -1px 10px #00cd94",
+                padding: "1em",
               }}
             >
               <Typography
@@ -101,7 +111,7 @@ export default function ContactCom() {
                         InputLabelProps={{ style: { fontSize: 22 } }}
                         {...field}
                         sx={{
-                          backgroundColor: "rgba(60, 200, 255,.5)",
+                          backgroundColor: "#00cd94",
                         }}
                       ></TextField>
                     )}
@@ -136,7 +146,7 @@ export default function ContactCom() {
                         InputLabelProps={{ style: { fontSize: 22 } }}
                         {...field}
                         sx={{
-                          backgroundColor: "rgba(60, 200, 255,.5)",
+                          backgroundColor: "#00cd94",
                         }}
                       ></TextField>
                     )}
@@ -165,7 +175,7 @@ export default function ContactCom() {
                         InputLabelProps={{ style: { fontSize: 22 } }}
                         {...field}
                         sx={{
-                          backgroundColor: "rgba(60, 200, 255,.5)",
+                          backgroundColor: "#00cd94",
                         }}
                       ></TextField>
                     )}
@@ -175,12 +185,12 @@ export default function ContactCom() {
                   <Button
                     variant="contained"
                     type="submit"
-                    color="primary"
                     style={{
+                      backgroundColor: "black",
                       fontSize: "1.25em",
                       margin: "auto",
                       width: "10em",
-                      color: "black",
+                      color: "white",
                       letterSpacing: "2px",
                     }}
                   >
