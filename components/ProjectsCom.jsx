@@ -9,7 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ProjectsCom = () => {
   return (
-    <div className={style.popOut}>
+    <Box className={style.popOut}>
       <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
@@ -41,7 +41,9 @@ const ProjectsCom = () => {
                   />
                 </Box>
                 <Container className={style.carouselText}>
-                  <Typography variant="h5">{project.title}</Typography>
+                  <Typography component="h5" variant="h5">
+                    {project.title}
+                  </Typography>
                   <Typography variant="body1">{project.description}</Typography>
                 </Container>
               </Box>
@@ -49,7 +51,7 @@ const ProjectsCom = () => {
           );
         })}
       </Carousel>
-    </div>
+    </Box>
   );
 };
 

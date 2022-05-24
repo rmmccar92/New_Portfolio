@@ -1,7 +1,7 @@
 .popOut {
     position: absolute;
     top: 10%;
-    left: 25%;
+    left: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     /* grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
@@ -17,6 +17,7 @@
     );
     border-radius: 15px;
     border: solid 1px rgb(74, 72, 72);
+    max-width: 48.5em;
   }
   
 
