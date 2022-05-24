@@ -13,7 +13,6 @@ import { Controller, useForm } from "react-hook-form";
 import style from "../styles/Popout.module.css";
 import Material from "./Material";
 import { Canvas } from "@react-three/fiber";
-import { validateEmail } from "../utils/helpers";
 
 export default function ContactCom() {
   const {

@@ -4,7 +4,7 @@
     left: 25%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
     color: whitesmoke;
     width: 60%;
     height: 75%;
@@ -80,6 +80,8 @@
         height: 90%;
         top: 2.5%;
         left: 2.5%;
+            grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+
     }
     
 }
