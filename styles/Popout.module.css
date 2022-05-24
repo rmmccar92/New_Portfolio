@@ -4,10 +4,10 @@
     left: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     color: whitesmoke;
     width: 60%;
-    height: 75%;
+    height: 50em;
     background-color: rgba(7, 7, 7, 0.726);
     background: radial-gradient(
       rgba(192, 192, 192, 0.045),
@@ -42,10 +42,11 @@
     /* font-family: 'Roboto', sans-serif; */
 }
 
-.contactForm {
-    margin-top: 0.75em;
-}
 
+.contactForm {
+    width: 100%;
+    height: 100%;
+}
 
 .carousel {
     grid-column-start: 1;
@@ -81,9 +82,9 @@
         height: 90%;
         top: 2.5%;
         left: 2.5%;
-            grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-
     }
-    
+    .contactForm {
+        height: 45em;
+    }
 }
 

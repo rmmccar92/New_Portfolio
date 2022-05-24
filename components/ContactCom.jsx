@@ -7,6 +7,7 @@ import {
   ListItem,
   TextField,
   Grid,
+  Box,
   Typography,
 } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
@@ -43,163 +44,150 @@ export default function ContactCom() {
       return;
     }
   };
-
   return (
     <div className={style.popOut}>
       <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
       <div className={style.gridText}>
-        <form
-          onSubmit={handleSubmit(handleFormSubmit)}
-          className={style.contactForm}
+        <Box
+          sx={{
+            backgroundColor: "rgb(35, 35, 35)",
+            maxWidth: "80%",
+            borderRadius: "10px",
+            boxShadow: "2px -1px 10px #00cd94",
+            padding: "1em",
+            display: "flex",
+            justifyContent: "center",
+            margin: "auto",
+            mt: { xs: "0.2em", xl: "1.75em" },
+          }}
         >
-          <Grid
-            container
-            display="flex"
-            justifyContent={"center"}
-            alignItems={"center"}
+          <form
+            onSubmit={handleSubmit(handleFormSubmit)}
+            className={style.contactForm}
           >
-            <Grid
-              item
-              xs={6}
-              sm={8}
+            <Typography
+              component="h1"
+              textAlign={"center"}
               sx={{
-                backgroundColor: "rgb(35, 35, 35)",
-                borderRadius: "10px",
-                boxShadow: "2px -1px 10px #00cd94",
-                padding: "1em",
+                fontSize: "75px",
+                padding: "0 5px 0 5px",
               }}
             >
-              <Typography
-                component="h1"
-                textAlign={"center"}
-                sx={{
-                  fontSize: "75px",
-                  padding: "0 5px 0 5px",
-                }}
-              >
-                Contact
-              </Typography>
-              <List>
-                <ListItem>
-                  <Controller
-                    name="name"
-                    control={control}
-                    defaultValue=""
-                    rules={{
-                      required: true,
-                      minLength: 2,
-                    }}
-                    render={({ field }) => (
-                      <TextField
-                        variant="outlined"
-                        fullWidth
-                        {...register("name")}
-                        error={Boolean(errors.name)}
-                        helperText={
-                          errors.name
-                            ? errors.firstName.type === "minLength"
-                              ? "First name must be at least 2 characters"
-                              : "This field is required"
-                            : ""
-                        }
-                        id="name"
-                        label="Name"
-                        inputProps={{ type: "text" }}
-                        InputLabelProps={{ style: { fontSize: 22 } }}
-                        {...field}
-                        sx={{
-                          backgroundColor: "#00cd94",
-                        }}
-                      ></TextField>
-                    )}
-                  ></Controller>
-                </ListItem>
-                <ListItem>
-                  <Controller
-                    name="email"
-                    control={control}
-                    defaultValue=""
-                    rules={{
-                      required: false,
-                      pattern:
-                        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    }}
-                    render={({ field }) => (
-                      <TextField
-                        variant="outlined"
-                        fullWidth
-                        {...register("email")}
-                        error={Boolean(errors.email)}
-                        helperText={
-                          errors.email
-                            ? errors.email.type === "pattern"
-                              ? "Invalid email"
-                              : "This field is required"
-                            : ""
-                        }
-                        id="email"
-                        label="Email"
-                        inputProps={{ type: "email" }}
-                        InputLabelProps={{ style: { fontSize: 22 } }}
-                        {...field}
-                        sx={{
-                          backgroundColor: "#00cd94",
-                        }}
-                      ></TextField>
-                    )}
-                  ></Controller>
-                </ListItem>
-                <ListItem>
-                  <Controller
-                    name="message"
-                    control={control}
-                    defaultValue=""
-                    rules={{
-                      required: true,
-                      minLength: 6,
-                    }}
-                    render={({ field }) => (
-                      <TextField
-                        variant="outlined"
-                        fullWidth
-                        {...register("message")}
-                        multiline
-                        maxRows={6}
-                        minRows={6}
-                        id="message"
-                        label="Message"
-                        inputProps={{ type: "text" }}
-                        InputLabelProps={{ style: { fontSize: 22 } }}
-                        {...field}
-                        sx={{
-                          backgroundColor: "#00cd94",
-                        }}
-                      ></TextField>
-                    )}
-                  ></Controller>
-                </ListItem>
-                <ListItem>
-                  <Button
-                    variant="contained"
-                    type="submit"
-                    style={{
-                      backgroundColor: "black",
-                      fontSize: "1.25em",
-                      margin: "auto",
-                      width: "10em",
-                      color: "white",
-                      letterSpacing: "2px",
-                    }}
-                  >
-                    Submit
-                  </Button>
-                </ListItem>
-              </List>
-            </Grid>
-          </Grid>
-        </form>
+              Contact
+            </Typography>
+            <List>
+              <ListItem>
+                <Controller
+                  name="name"
+                  control={control}
+                  defaultValue=""
+                  rules={{
+                    required: true,
+                    minLength: 2,
+                  }}
+                  render={({ field }) => (
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      {...register("name")}
+                      id="name"
+                      label="Name"
+                      inputProps={{ type: "text" }}
+                      InputLabelProps={{ style: { fontSize: 22 } }}
+                      {...field}
+                      sx={{
+                        backgroundColor: "#00cd94",
+                      }}
+                    ></TextField>
+                  )}
+                ></Controller>
+              </ListItem>
+              <ListItem>
+                <Controller
+                  name="email"
+                  control={control}
+                  defaultValue=""
+                  rules={{
+                    required: false,
+                    pattern:
+                      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                  }}
+                  render={({ field }) => (
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      {...register("email")}
+                      error={Boolean(errors.email)}
+                      helperText={
+                        errors.email
+                          ? errors.email.type === "pattern"
+                            ? "Invalid email"
+                            : "This field is required"
+                          : ""
+                      }
+                      id="email"
+                      label="Email"
+                      inputProps={{ type: "email" }}
+                      InputLabelProps={{ style: { fontSize: 22 } }}
+                      {...field}
+                      sx={{
+                        backgroundColor: "#00cd94",
+                      }}
+                    ></TextField>
+                  )}
+                ></Controller>
+              </ListItem>
+              <ListItem>
+                <Controller
+                  name="message"
+                  control={control}
+                  defaultValue=""
+                  rules={{
+                    required: true,
+                    minLength: 6,
+                  }}
+                  render={({ field }) => (
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      {...register("message")}
+                      multiline
+                      maxRows={6}
+                      minRows={6}
+                      id="message"
+                      label="Message"
+                      inputProps={{ type: "text" }}
+                      InputLabelProps={{ style: { fontSize: 22 } }}
+                      {...field}
+                      sx={{
+                        backgroundColor: "#00cd94",
+                      }}
+                    ></TextField>
+                  )}
+                ></Controller>
+              </ListItem>
+              <ListItem>
+                <Button
+                  variant="contained"
+                  type="submit"
+                  style={{
+                    backgroundColor: "black",
+                    fontSize: "1.25em",
+                    margin: "auto",
+                    width: "10em",
+                    color: "white",
+                    letterSpacing: "2px",
+                    zIndex: "999",
+                  }}
+                >
+                  Submit
+                </Button>
+              </ListItem>
+            </List>
+          </form>
+        </Box>
       </div>
     </div>
   );

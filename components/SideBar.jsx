@@ -38,22 +38,26 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
                 transform: "scale(1.1)",
               },
               "&:after": {
-                content: `''`,
-                // display: "inline-block",
-                margin: 0,
-                padding: 0,
-                borderTop: "1em solid transparent",
-                borderBottom: "1em solid transparent",
-                borderLeft: "1em solid rgba(159, 158, 167, 0.451)",
-                // filter: "blur(0.35px)",
+                md: {
+                  content: `''`,
+                  // display: "inline-block",
+                  margin: 0,
+                  padding: 0,
+                  borderTop: "1em solid transparent",
+                  borderBottom: "1em solid transparent",
+                  borderLeft: "1em solid rgba(159, 158, 167, 0.451)",
+                  // filter: "blur(0.35px)",
+                },
               },
               "&:before": {
-                content: `''`,
-                // display: "inline-block",
-                borderTop: "1em solid transparent",
-                borderBottom: "1em solid transparent",
-                borderRight: "1em solid rgba(159, 158, 167, 0.451)",
-                // filter: "blur(0.4px)",
+                md: {
+                  content: `''`,
+                  // display: "inline-block",
+                  borderTop: "1em solid transparent",
+                  borderBottom: "1em solid transparent",
+                  borderRight: "1em solid rgba(159, 158, 167, 0.451)",
+                  // filter: "blur(0.4px)",
+                },
               },
               "&:hover:before": {
                 display: "none",
@@ -79,10 +83,13 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
                 },
                 "&:hover": {
                   md: {
-                    transform: "scale(1.1)",
                     backgroundColor: `#00cd94`,
+                    transform: "scale(1.1)",
                     borderTopRightRadius: `0.75em`,
                     borderBottomRightRadius: `0.75em`,
+                  },
+                  xs: {
+                    backgroundColor: `#00cd94`,
                   },
                 },
               }}
