@@ -14,6 +14,7 @@ import { Controller, useForm } from "react-hook-form";
 import style from "../styles/Popout.module.css";
 import Material from "./Material";
 import { Canvas } from "@react-three/fiber";
+import Popout from "./Popout";
 
 export default function ContactCom() {
   const {
@@ -45,7 +46,15 @@ export default function ContactCom() {
     }
   };
   return (
-    <div className={style.popOut}>
+    // <Box
+    //   className={style.popOut}
+    //   sx={{
+    //     position: "absolute",
+    //     width: { xs: "95vw", md: "60vw" },
+    //     left: { sm: "3%", md: "28%" },
+    //   }}
+    // >
+    <Popout>
       <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
@@ -53,28 +62,22 @@ export default function ContactCom() {
         <Box
           sx={{
             backgroundColor: "rgb(35, 35, 35)",
-            maxWidth: "80%",
+            maxWidth: { xs: "75%", sm: "90%", md: "85%" },
+            height: { sm: "60vh", md: "65vh", lg: "80vh" },
             borderRadius: "10px",
             boxShadow: "2px -1px 10px #00cd94",
-            padding: "1em",
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
             margin: "auto",
-            mt: { xs: "0.2em", xl: "1.75em" },
+            mt: { xs: "0.2em", sm: "0.5em", md: "1.25em" },
           }}
         >
           <form
             onSubmit={handleSubmit(handleFormSubmit)}
             className={style.contactForm}
           >
-            <Typography
-              component="h1"
-              textAlign={"center"}
-              sx={{
-                fontSize: "75px",
-                padding: "0 5px 0 5px",
-              }}
-            >
+            <Typography component="h2" variant="h2" textAlign={"center"}>
               Contact
             </Typography>
             <List>
@@ -189,6 +192,7 @@ export default function ContactCom() {
           </form>
         </Box>
       </div>
-    </div>
+      {/* </Box> */}
+    </Popout>
   );
 }

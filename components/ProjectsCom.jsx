@@ -6,10 +6,11 @@ import data from "../data/projects.js";
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Popout from "./Popout";
 
 const ProjectsCom = () => {
   return (
-    <Box className={style.popOut}>
+    <Popout>
       <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
@@ -51,7 +52,7 @@ const ProjectsCom = () => {
           );
         })}
       </Carousel>
-    </Box>
+    </Popout>
   );
 };
 

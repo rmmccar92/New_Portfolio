@@ -1,10 +1,11 @@
 import { Canvas } from "@react-three/fiber";
 import Material from "./Material";
 import style from "../styles/Popout.module.css";
+import Popout from "./Popout";
 
 const LinksCom = (props) => {
   return (
-    <div className={style.popOut}>
+    <Popout>
       <Canvas className={style.popOutCanvas}>
         <Material />
       </Canvas>
@@ -22,7 +23,7 @@ const LinksCom = (props) => {
           </li>
         </ol>
       </div>
-    </div>
+    </Popout>
   );
 };
 

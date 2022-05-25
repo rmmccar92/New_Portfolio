@@ -1,13 +1,8 @@
 .popOut {
-    position: absolute;
-    top: 10%;
-    left: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     color: whitesmoke;
-    width: 60%;
-    height: 50em;
     background-color: rgba(7, 7, 7, 0.726);
     background: radial-gradient(
       rgba(192, 192, 192, 0.045),
@@ -17,7 +12,6 @@
     );
     border-radius: 15px;
     border: solid 1px rgb(74, 72, 72);
-    max-width: 48.5em;
   }
   
 
@@ -39,13 +33,16 @@
     grid-row-end: 1;
     z-index: 2;
     font-size: 2.5rem;
-    /* font-family: 'Roboto', sans-serif; */
 }
 
 
 .contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    padding: 12px;
 }
 
 .carousel {
@@ -58,7 +55,7 @@
 .carouselInner {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 1em;
+    /* gap: 1em; */
     grid-template-areas:
       "a a a a b b b b"
       "a a a a b b b b"
@@ -76,15 +73,4 @@
     align-self: center;
 }
 
-@media screen and (max-width: 500px) {
-    .popOut {
-        width: 95%;
-        height: 90%;
-        top: 2.5%;
-        left: 2.5%;
-    }
-    .contactForm {
-        height: 45em;
-    }
-}
 
