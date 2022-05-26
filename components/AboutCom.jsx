@@ -32,12 +32,13 @@ const AboutCom = () => {
         </Typography>
         <Container
           sx={{
-            border: "2px solid blue",
+            border: "1.75px solid #00cd94",
             width: "14em",
             height: "18em",
             borderRadius: "80%",
             position: "relative",
             mt: "1em",
+            boxShadow: "2px -1px 10px #00cd94",
           }}
         >
           <Image
