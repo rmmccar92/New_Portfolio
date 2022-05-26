@@ -183,6 +183,7 @@ export default function ContactCom() {
                     color: "white",
                     letterSpacing: "2px",
                     zIndex: "999",
+                    fontSize: "2em",
                   }}
                 >
                   Submit

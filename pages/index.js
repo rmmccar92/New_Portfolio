@@ -11,6 +11,7 @@ import LinksCom from "../components/LinksCom";
 import ContactCom from "../components/ContactCom";
 
 // TODO: Add a loading screen
+// TODO: Learn more about shaders
 // TODO: investigate sketchfab
 // TODO: add a contact page
 // TODO: add a resume page
