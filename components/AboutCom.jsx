@@ -46,8 +46,8 @@ const AboutCom = () => {
             alt="Ryan McCarthy"
             layout="fill"
             objectFit="cover"
-            objectPosition="right"
-            style={{ borderRadius: "80%" }}
+            objectPosition="top 3px right 20px"
+            style={{ borderRadius: "80%", backgroundColor: "#68655C" }}
           />
         </Container>
         <Container>
