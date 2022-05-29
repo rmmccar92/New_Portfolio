@@ -58,7 +58,15 @@ const AboutCom = () => {
           <Typography variant="h4" component="h4" textAlign="center" m="0.5em">
             Technologies:
           </Typography>
-          <Container justifyContent="center">
+          <Container
+            justifyContent="center"
+            sx={{
+              backgroundColor: "rgba(0, 205, 148, 0.4)",
+              borderRadius: "16px",
+              border: "3px solid black",
+              padding: "1em",
+            }}
+          >
             <Carousel
               ariaLabel="Technologies"
               infiniteLoop
