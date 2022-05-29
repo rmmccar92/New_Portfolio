@@ -19,7 +19,6 @@ const ProjectsCom = () => {
         infiniteLoop
         emulateTouch
         autoFocus
-        interval={5000}
         showThumbs={false}
         className={style.carousel}
         showStatus={false}

@@ -5,6 +5,10 @@ import Popout from "./Popout";
 import Image from "next/image";
 import { Box, Container, Typography } from "@mui/material";
 import headPhoto from "../public/images/me.jpg";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import data from "../data/technologies.js";
+
 const AboutCom = () => {
   return (
     <Popout>
@@ -54,7 +58,37 @@ const AboutCom = () => {
           <Typography variant="h4" component="h4" textAlign="center" m="0.5em">
             Technologies:
           </Typography>
-          <Container>{/* TODO: Technology carousel */}</Container>
+          <Container justifyContent="center">
+            <Carousel
+              ariaLabel="Technologies"
+              infiniteLoop
+              autoPlay
+              interval={2000}
+              showStatus={false}
+              showArrows={false}
+              showIndicators={false}
+              showThumbs={false}
+              centerMode
+              dynamicHeight
+              centerSlidePercentage={30}
+              padding="1em"
+            >
+              {data.images.map((image, index) => {
+                return (
+                  <Box key={index} position="relative" width="5em" height="5em">
+                    <Image
+                      src={image.url}
+                      alt={image.name}
+                      layout="fill"
+                      objectFit="contain"
+                      objectPosition="center"
+                      key={index}
+                    />
+                  </Box>
+                );
+              })}
+            </Carousel>
+          </Container>
         </Container>
       </Box>
     </Popout>
