@@ -2,6 +2,7 @@ import React from "react";
 import emailjs from "@emailjs/browser";
 import {
   Button,
+  Container,
   Link,
   List,
   ListItem,
@@ -59,11 +60,12 @@ export default function ContactCom() {
         <Material />
       </Canvas>
       <div className={style.gridText}>
-        <Box
+        <Container
           sx={{
             backgroundColor: "rgb(35, 35, 35)",
             maxWidth: { xs: "75%", sm: "90%", md: "85%" },
             height: { sm: "60vh", md: "65vh", lg: "80vh" },
+            minHeight: { xs: "30em", md: "36em" },
             borderRadius: "10px",
             boxShadow: "2px -1px 10px #00cd94",
             display: "flex",
@@ -172,26 +174,34 @@ export default function ContactCom() {
                 ></Controller>
               </ListItem>
               <ListItem>
-                <Button
-                  variant="contained"
-                  type="submit"
-                  style={{
-                    backgroundColor: "black",
-                    fontSize: "1.25em",
-                    margin: "auto",
-                    width: "10em",
-                    color: "white",
-                    letterSpacing: "2px",
-                    zIndex: "999",
-                    fontSize: "2em",
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    width: "100%",
                   }}
                 >
-                  Submit
-                </Button>
+                  <Button
+                    variant="contained"
+                    type="submit"
+                    style={{
+                      backgroundColor: "black",
+                      fontSize: "1.25em",
+                      margin: "auto",
+                      width: "10em",
+                      color: "white",
+                      letterSpacing: "2px",
+                      zIndex: "999",
+                      fontSize: "2em",
+                    }}
+                  >
+                    Submit
+                  </Button>
+                </Box>
               </ListItem>
             </List>
           </form>
-        </Box>
+        </Container>
       </div>
       {/* </Box> */}
     </Popout>

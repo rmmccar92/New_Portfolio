@@ -24,7 +24,11 @@ const AboutCom = () => {
         <Typography variant="h2" component="h2">
           About Me
         </Typography>
-        <Typography component="p" variant="p" sx={{ fontSize: "1.25em" }}>
+        <Typography
+          component="p"
+          variant="p"
+          sx={{ fontSize: { xs: ".85em", md: "1em", lg: "1.25em" } }}
+        >
           Welcome to my Portfolio. I have always found myself drawn to the
           ability to create. Whether that&apos;s a digital or physical project
           there&apos;s a certain amount of craftsmanship that can be
@@ -37,8 +41,8 @@ const AboutCom = () => {
         <Container
           sx={{
             border: "1.75px solid #00cd94",
-            width: "14em",
-            height: "18em",
+            width: { xs: "7em", lg: "15em" },
+            height: { xs: "9em", lg: "20em" },
             borderRadius: "80%",
             position: "relative",
             mt: "1em",
@@ -65,6 +69,7 @@ const AboutCom = () => {
               borderRadius: "16px",
               border: "3px solid black",
               padding: "1em",
+              height: { xs: "15%", md: "25%" },
             }}
           >
             <Carousel
