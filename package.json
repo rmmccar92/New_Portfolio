@@ -30,6 +30,7 @@
     "react-dom": "18.0.0",
     "react-hook-form": "^7.31.2",
     "react-responsive-carousel": "^3.2.23",
+    "sass": "^1.52.1",
     "three": "^0.139.2"
   },
   "devDependencies": {

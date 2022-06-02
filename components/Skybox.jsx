@@ -6,7 +6,6 @@ import { useCubeTexture } from "@react-three/drei";
 const Skybox = () => {
   const { scene } = useThree();
   const texture = useCubeTexture(
-    // images taken from https://hdqwalls.com/2932x2932/space-wallpapers and altered
     // 4 1 Top Bottom 3 2
     [
       "cat.jpg",

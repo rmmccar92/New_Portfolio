@@ -38,6 +38,10 @@ Keeping track of links that helped me build this site.
 
 - <https://hdqwalls.com/2932x2932/space-wallpapers>
 
+### Codepen for the loading screen
+
+<https://codepen.io/crayon-code/pen/eYdVLJo>
+
 ## Troubleshooting Rabbit Hole
 
 ### Solved an issue I was having with glsl files in NextJS

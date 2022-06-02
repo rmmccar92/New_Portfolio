@@ -9,6 +9,7 @@ import AboutCom from "../components/AboutCom";
 import ProjectsCom from "../components/ProjectsCom";
 import LinksCom from "../components/LinksCom";
 import ContactCom from "../components/ContactCom";
+import Loading from "../components/Loading";
 
 // TODO: Add a loading screen
 // TODO: Learn more about shaders
@@ -28,6 +29,7 @@ export const navLinks = [
 
 const Home = () => {
   const [currentComponent, setCurrentComponent] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const renderComponent = () => {
     switch (currentComponent) {
@@ -49,34 +51,40 @@ const Home = () => {
   };
 
   const handleClick = (component) => setCurrentComponent(component);
+  const handleLoading = () => setTimeout(() => setLoading(false), 5000);
+
   return (
     <>
-      <div className={css.scene}>
-        <Canvas
-          linear
-          flat
-          onClick={() => handleClick("Home")}
-          shadows={true}
-          className={css.canvas}
-          camera={{
-            position: [0, 9, 20],
+      {loading ? (
+        (handleLoading(), (<Loading />))
+      ) : (
+        <div className={css.scene}>
+          <Canvas
+            linear
+            flat
+            onClick={() => handleClick("Home")}
+            shadows={true}
+            className={css.canvas}
+            camera={{
+              position: [0, 9, 20],
 
-            //   fov: 45,
-            //   near: 0.1,
-            //   far: 1000,
-          }}
-        >
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
-        </Canvas>
-        <SideBar
-          currentComponent={currentComponent}
-          handleClick={handleClick}
-          navLinks={navLinks}
-        />
-        {renderComponent()}
-      </div>
+              //   fov: 45,
+              //   near: 0.1,
+              //   far: 1000,
+            }}
+          >
+            <Suspense fallback={null}>
+              <Scene />
+            </Suspense>
+          </Canvas>
+          <SideBar
+            currentComponent={currentComponent}
+            handleClick={handleClick}
+            navLinks={navLinks}
+          />
+          {renderComponent()}
+        </div>
+      )}
     </>
   );
 };
