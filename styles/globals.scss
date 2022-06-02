@@ -98,7 +98,7 @@ $colors: (
     background-color: transparent;
     box-sizing: border-box;
     border: var(--border-width) solid var(--cell-color);
-    
+    box-shadow:var(--cell-color) 1px 1px 10px 1px;
     animation: 1.5s ripple ease infinite;
     
     $delays: (2 * 4) - 2;
