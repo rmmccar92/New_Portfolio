@@ -47,3 +47,7 @@ Keeping track of links that helped me build this site.
 ### Solved an issue I was having with glsl files in NextJS
 
 - <https://stackoverflow.com/questions/68446790/next-js-import-module-with-fs-dependency>
+
+### Fixed my issue with Cubeloader 
+
+- <https://github.com/pmndrs/react-three-fiber/issues/602>
