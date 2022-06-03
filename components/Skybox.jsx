@@ -8,8 +8,8 @@ const Skybox = () => {
   const [cubeMap] = useLoader(CubeTextureLoader, [
     // 4 1 Top Bottom 3 2
     [
-      "/images/cat.jpg",
       "/images/7c.png",
+      "/images/cat.jpg",
       "/images/extra5c.png",
       "/images/5b.png",
       "/images/extra3b.png",

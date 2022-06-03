@@ -66,8 +66,7 @@ const Home = () => {
             shadows={true}
             className={css.canvas}
             camera={{
-              position: [0, 9, 20],
-
+              position: [10, 9, 20],
               //   fov: 45,
               //   near: 0.1,
               //   far: 1000,
