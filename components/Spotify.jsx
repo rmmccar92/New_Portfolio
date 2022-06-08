@@ -1,20 +1,27 @@
 import React, { useEffect } from "react";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+
+const key = publicRuntimeConfig.SECRET;
 export default function Spotify() {
-  const token = "Bearer ";
-  useEffect(() => {
-    try {
-      fetch("https://api.spotify.com/v1/me/player/currently-playing", {
-        headers: {
-          Authorization: token,
-        },
-      });
-      if (res) {
-        console.log(res);
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     const res = fetch(
+  //       "https://api.spotify.com/v1/playlists/6jLe3oKRrgV4cTnb0ZUPSC?si=d149731c88584ce3",
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer `,
+  //         },
+  //       }
+  //     );
+  //     if (res) {
+  //       console.log(res);
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }, []);
 
   return <div>Spotify</div>;
 }

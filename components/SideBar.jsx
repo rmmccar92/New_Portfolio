@@ -4,6 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MuiNextLink from "./MuiNextLink";
+import Spotify from "./Spotify";
 
 const drawerWidth = 280;
 
@@ -110,6 +111,7 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
           </ListItem>
         ))}
       </List>
+      <Spotify />
     </Container>
   );
 
