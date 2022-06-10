@@ -16,16 +16,17 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
         backdropFilter: `blur(5px)`,
         overflow: `hidden`,
         height: { xs: "20vh", md: "100vh" },
+
         width: { xs: "100%", md: drawerWidth },
       }}
     >
       <List
         sx={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          alignItems: { xs: `space-evenly`, md: "center" },
+          justifyContent: { xs: `space-evenly`, md: "center" },
           flexDirection: { xs: "row", md: "column" },
-          height: { xs: "25vh", md: "100vh" },
+          height: { xs: "16vh", md: "100vh" },
         }}
       >
         {navLinks.map(({ title, path, onClick }, index) => (
@@ -33,8 +34,10 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
             key={index}
             sx={{
               // border: `rgba(192, 192, 192, 0.045) 1px solid`,
-              padding: `0.5em 0 0.5em 0`,
+              padding: { xs: `0`, md: `0.5em 0` },
               transition: "transform .25s,",
+              width: { xs: "18%", md: "100%" },
+              height: { xs: `100%`, md: "10vh" },
               "&:hover": {
                 transform: "scale(1.1)",
               },
@@ -74,10 +77,10 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
                 borderLeft: "2px solid rgba(159, 158, 167, 0.051)",
                 backgroundColor: `rgba(192, 192, 192, 0.3)`,
                 backdropFilter: `blur(5px)`,
-                margin: `0.5em 0 0.5em 0`,
-                padding: `0`,
-                transform: { xs: "rotate(280deg)", md: "rotate(0deg)" },
-                width: `100%`,
+                margin: { xs: `0`, md: `0.5em 0 0.5em 0` },
+                padding: 0,
+                transform: { xs: "rotate(285deg)", md: "rotate(0deg)" },
+                width: { xs: `9em`, md: `100%` },
                 textAlign: `center`,
                 transition: {
                   md: "transform .5s, color .25s, background-color .25s, border-top-right-radius .5s ease-in-out, border-bottom-right-radius .5s ease-in-out",
@@ -123,8 +126,9 @@ function SideBar({ navLinks, handleClick, currentComponent }) {
           // display: { xs: "none", md: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            top: { xs: "80%", md: "0" },
+            top: { xs: "84%", md: "0" },
             width: { xs: "100%", md: drawerWidth },
+            height: { xs: "100%", md: "100vh" },
             backgroundColor: "transparent",
             border: "none",
           },

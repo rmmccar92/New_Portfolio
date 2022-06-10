@@ -16,9 +16,10 @@ const AboutCom = () => {
         <Material />
       </Canvas>
       <Box
-        className={style.gridText}
+        className={style.aboutText}
         sx={{
           m: "1em",
+          position: "relative",
         }}
       >
         <Typography variant="h2" component="h2">
@@ -63,13 +64,13 @@ const AboutCom = () => {
             Technologies:
           </Typography>
           <Container
-            justifyContent="center"
             sx={{
               backgroundColor: "rgba(0, 205, 148, 0.4)",
               borderRadius: "16px",
               border: "3px solid black",
               padding: "1em",
               height: { xs: "15%", md: "25%" },
+              justifyContent: "center",
             }}
           >
             <Carousel
