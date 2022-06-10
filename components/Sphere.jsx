@@ -8,7 +8,7 @@ const Sphere = (props) => {
   const texture = useLoader(TextureLoader, "/images/moon_texture.jpg");
   const normalMap = useLoader(TextureLoader, "/images/normal_map_MOON.png");
   const mesh = useRef();
-  useFrame(() => (mesh.current.rotation.y += 0.001));
+  useFrame(() => (mesh.current.rotation.y -= 0.001));
   return (
     <>
       <animated.mesh
