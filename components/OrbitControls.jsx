@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import { extend, useThree, useFrame } from "@react-three/fiber";
+import { useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
-// extend({ OrbitControls });
 
 function Controls() {
   const { camera, gl } = useThree();

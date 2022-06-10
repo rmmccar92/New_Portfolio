@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { useSpring, animated, config } from "@react-spring/three";
 import { useLoader, useFrame } from "@react-three/fiber";
 import { TextureLoader } from "three";
-import Box from "./Box";
 
 const Sphere = (props) => {
   const texture = useLoader(TextureLoader, "/images/moon_texture.jpg");
