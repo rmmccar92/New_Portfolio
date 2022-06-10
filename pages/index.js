@@ -55,35 +55,32 @@ const Home = () => {
 
   return (
     <>
-      {loading ? (
-        (handleLoading(), (<Loading />))
-      ) : (
-        <div className={css.scene}>
-          <Canvas
-            linear
-            flat
-            onClick={() => handleClick("Home")}
-            shadows={true}
-            className={css.canvas}
-            camera={{
-              position: [10, 9, 20],
-              //   fov: 45,
-              //   near: 0.1,
-              //   far: 1000,
-            }}
-          >
-            <Suspense fallback={null}>
-              <Scene />
-            </Suspense>
-          </Canvas>
-          <SideBar
-            currentComponent={currentComponent}
-            handleClick={handleClick}
-            navLinks={navLinks}
-          />
-          {renderComponent()}
-        </div>
-      )}
+      <div className={css.scene}>
+        {loading && (handleLoading(), (<Loading />))}
+        <Canvas
+          linear
+          flat
+          onClick={() => handleClick("Home")}
+          shadows={true}
+          className={css.canvas}
+          camera={{
+            position: [10, 9, 20],
+            //   fov: 45,
+            //   near: 0.1,
+            //   far: 1000,
+          }}
+        >
+          <Suspense fallback={null}>
+            <Scene />
+          </Suspense>
+        </Canvas>
+        <SideBar
+          currentComponent={currentComponent}
+          handleClick={handleClick}
+          navLinks={navLinks}
+        />
+        {renderComponent()}
+      </div>
     </>
   );
 };

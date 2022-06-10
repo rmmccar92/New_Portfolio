@@ -1,8 +1,8 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 
 const Loading = () => {
   return (
-    <Container
+    <Box
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -10,6 +10,9 @@ const Loading = () => {
         alignItems: "center",
         width: "100vw",
         height: "100vh",
+        zIndex: "9999",
+        position: "absolute",
+        backgroundColor: "rgba(0,0,0,1)",
       }}
     >
       <div className="mosaic-loader">
@@ -33,7 +36,7 @@ const Loading = () => {
       <Typography variant="h4" component="h1" color="white">
         Loading...
       </Typography>
-    </Container>
+    </Box>
   );
 };
 
