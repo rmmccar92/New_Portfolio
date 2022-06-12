@@ -8,6 +8,11 @@ const data = {
     { name: "MongoDB", url: "/images/technologies/mongo.png" },
     { name: "React", url: "/images/technologies/React.png" },
     { name: "NextJS", url: "/images/technologies/Next.png" },
+    { name: "Git", url: "/images/technologies/Git.png" },
+    { name: "Github", url: "/images/technologies/GitHub.png" },
+    { name: "NodeJS", url: "/images/technologies/Node.svg" },
+    { name: "Express", url: "/images/technologies/Express.png" },
+    { name: "Vercel", url: "/vercel.svg" },
   ],
 };
 export default data;

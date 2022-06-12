@@ -85,10 +85,10 @@ const AboutCom = () => {
                 border: "3px solid black",
                 padding: { xs: "0", md: "1em" },
                 position: "relative",
-                // bottom: "1.25em",
+                bottom: "1.25em",
                 overflow: "hidden",
-                width: { xs: "35%", lg: "100%" },
-                // height: { xs: "10%", md: "25%" },
+                width: { xs: "35%", lg: "75%" },
+                height: { xs: "10%", md: "25%" },
                 justifyContent: "center",
               }}
             >
@@ -126,20 +126,6 @@ const AboutCom = () => {
                   );
                 })}
               </Carousel>
-              {/* <Box sx={{ display: { xs: "block", md: "none" } }}>
-                {data.images.map((image, index) => {
-                  <Box key={index} position="relative" width="5em" height="5em">
-                    <Image
-                      src={image.url}
-                      alt={image.name}
-                      layout="fill"
-                      objectFit="contain"
-                      objectPosition="center"
-                      key={index}
-                    />
-                  </Box>;
-                })} */}
-              {/* </Box> */}
             </Box>
           </Box>
         </Box>
