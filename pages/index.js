@@ -23,7 +23,6 @@ export const navLinks = [
   { title: "Projects", path: "/projects" },
   { title: "Links", path: "/links" },
   { title: "About", path: "/about" },
-  { title: "Resume", path: "/resume" },
   { title: "Contact", path: "/contact" },
 ];
 
@@ -41,8 +40,6 @@ const Home = () => {
         return <ProjectsCom />;
       case "Links":
         return <LinksCom />;
-      case "Resume":
-        return;
       case "Contact":
         return <ContactCom />;
       default:
