@@ -1,6 +1,6 @@
 // index.jsx
 import css from "../styles/Home.module.css";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import Scene from "../components/Scene";
@@ -11,10 +11,7 @@ import LinksCom from "../components/LinksCom";
 import ContactCom from "../components/ContactCom";
 import Loading from "../components/Loading";
 
-// TODO: Add a loading screen
-// TODO: Learn more about shaders
 // TODO: investigate sketchfab
-// TODO: add a contact page
 // TODO: add a resume page
 // TODO: toggle controls
 
@@ -27,9 +24,24 @@ export const navLinks = [
 ];
 
 const Home = () => {
+  const [popAchievement, setPopAchievement] = useState(false);
+  const [achievement, setAchievement] = useState([]);
   const [currentComponent, setCurrentComponent] = useState("");
   const [loading, setLoading] = useState(true);
 
+  const handleAchievement = (condition) => {
+    console.log("handleAchievement", condition);
+    setAchievement((prev) => ({ ...prev, condition }));
+    setPopAchievement(true);
+    setInterval(() => setPopAchievement(false), 5000);
+  };
+  useEffect(() => {
+    console.log("mounted");
+    return () => {
+      handleAchievement({ name: "test", description: "test" });
+      console.log(achievement, popAchievement);
+    };
+  }, []);
   const renderComponent = () => {
     switch (currentComponent) {
       case "Home":
