@@ -11,7 +11,6 @@ import LinksCom from "../components/LinksCom";
 import ContactCom from "../components/ContactCom";
 import Loading from "../components/Loading";
 
-// TODO: investigate sketchfab
 // TODO: add a resume page
 // TODO: toggle controls
 
@@ -30,18 +29,17 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   const handleAchievement = (condition) => {
-    console.log("handleAchievement", condition);
-    setAchievement((prev) => ({ ...prev, condition }));
-    setPopAchievement(true);
-    setInterval(() => setPopAchievement(false), 5000);
+    // console.log("handleAchievement", condition);
+    setAchievement((prev) => ({
+      ...prev,
+      condition,
+    }));
+    setTimeout(() => {
+      console.log("count");
+      setPopAchievement(false);
+    }, 5000);
   };
-  useEffect(() => {
-    console.log("mounted");
-    return () => {
-      handleAchievement({ name: "test", description: "test" });
-      console.log(achievement, popAchievement);
-    };
-  }, []);
+
   const renderComponent = () => {
     switch (currentComponent) {
       case "Home":
@@ -83,6 +81,17 @@ const Home = () => {
             <Scene />
           </Suspense>
         </Canvas>
+        <button
+          className={
+            popAchievement ? "testButton clicked" : "testButton unclicked"
+          }
+          onClick={() => {
+            setPopAchievement(!popAchievement);
+            handleAchievement({ name: "test", description: "test" });
+          }}
+        >
+          test
+        </button>
         <SideBar
           currentComponent={currentComponent}
           handleClick={handleClick}
