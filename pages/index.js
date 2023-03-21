@@ -81,7 +81,7 @@ const Home = () => {
             <Scene />
           </Suspense>
         </Canvas>
-        <button
+        {/* <button
           className={
             popAchievement ? "testButton clicked" : "testButton unclicked"
           }
@@ -91,7 +91,7 @@ const Home = () => {
           }}
         >
           test
-        </button>
+        </button> */}
         <SideBar
           currentComponent={currentComponent}
           handleClick={handleClick}

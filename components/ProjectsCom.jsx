@@ -4,6 +4,7 @@ import Material from "./Material";
 import style from "../styles/Popout.module.css";
 import data from "../data/projects.js";
 import Image from "next/image";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Popout from "./Popout";
@@ -45,6 +46,7 @@ const ProjectsCom = () => {
                     {project.title}
                   </Typography>
                   <Typography variant="body1">{project.description}</Typography>
+                  <a href={project.repo}><GitHubIcon /></a>
                 </Container>
               </Box>
             </Container>
